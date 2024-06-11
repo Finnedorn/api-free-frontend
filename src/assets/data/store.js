@@ -1,8 +1,8 @@
 import {reactive} from "vue";
 
 export const store = reactive({
-    apiUrl:'',
-    imgBasePath: '',
+    apiUrl:'http://localhost:3001/',
+    // imgBasePath: '',
     posts:[],
     categories:[],
     tags:[]
