@@ -1,6 +1,8 @@
 <template>
-  <HeaderComponent/>
-  <router-view :key="$route.path"></router-view>
+  <div>
+    <HeaderComponent/>
+    <router-view :key="$route.path"></router-view>
+  </div>
 </template>
 
 <script>
@@ -27,4 +29,12 @@ export default {
 
 <style lang="scss" scoped>
 //   @use "./assets/style/partials/variables" as *;
+
+div {
+  background-image: url("./assets/img/blog-bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 </style>

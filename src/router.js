@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AppPosts from './pages/AppPosts.vue';
+import AppPostsShow from './pages/AppPostShow.vue';
+import AppPostCreate from './pages/AppPostCreate.vue';
 import NotFound from './pages/NotFound.vue';
 
 const router = createRouter({
@@ -9,6 +11,16 @@ const router = createRouter({
       path: '/',
       name: 'posts',
       component: AppPosts
+    },
+    {
+      path: '/:slug',
+      name: 'post-show',
+      component: AppPostsShow
+    },
+    {
+      path: '/create',
+      name: 'post-create',
+      component: AppPostCreate
     },
     // imposto una rotta di fallback
     // in caso di errore di pagina non trovata, mi redireziona qua 

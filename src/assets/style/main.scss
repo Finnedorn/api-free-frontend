@@ -1,9 +1,64 @@
 // @use '/src/assets/partials/variables.scss' as *;
 
-$fa-font-path: '../webfonts';
-@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '@fortawesome/fontawesome-free/scss/solid.scss';
-@import '@fortawesome/fontawesome-free/scss/regular.scss';
-@import '@fortawesome/fontawesome-free/scss/brands.scss';
+$fa-font-path: "../webfonts";
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
+@import "@fortawesome/fontawesome-free/scss/regular.scss";
+@import "@fortawesome/fontawesome-free/scss/brands.scss";
 
-@import 'bootstrap/scss/bootstrap';
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+
+@import "bootstrap/scss/bootstrap";
+
+// scrollbar
+
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background-image: url("../img/blog-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 100% ;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0); 
+  border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(57, 57, 57, 0.7);
+  transition: all 0.3s;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.9
+  ); 
+}
+
+// miscellaneous
+
+h1 {
+  font-size: 3rem;
+  font-family: "Amatic Sc", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: "Amatic Sc", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+a{
+    text-decoration: none;
+}
