@@ -16,11 +16,7 @@
     <!-- aggiungi un tasto + che porta alla create del post -->
   </div>
   <div class="d-flex justify-content-center pt-1 pb-5">
-    <router-link to="/create">
-      <div class="plus-wrapper">
-        <i class="fa-solid fa-plus"></i>
-      </div>
-    </router-link>
+    <AddPostComponent/>
   </div>
 </template>
 
@@ -28,10 +24,12 @@
 import axios from "axios";
 import { store } from "../assets/data/store";
 import PostComponent from "@/components/PostComponent.vue";
+import AddPostComponent from "@/components/AddPostComponent.vue";
 export default {
   name: 'AppPosts',
   components: {
-    PostComponent
+    PostComponent,
+    AddPostComponent
   },
   data() {
       return {

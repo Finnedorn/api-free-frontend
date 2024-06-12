@@ -1,14 +1,12 @@
 <template>
     <div class="postCard position-relative d-flex justify-content-center align-items-start">
-        <div class="imgBox position-absolute">
-            <img :src="source" :alt="title">
+        <div class="imgBox position-absolute d-flex justify-content-center align-items-center">
+            <i class="fs-1 text-light fa-solid fa-plus"></i>
         </div>
         <div class="content">
-            <h2>{{ title }}</h2>
-            <p>{{ content.length > 60 ? content.substring(0,60) + "..." : content }}</p>
-            <router-link :to="link">
+            <router-link to="/create">
                 <a href="#">
-                    Leggimi
+                    Nuovo Post
                 </a>
             </router-link>
         </div>
@@ -17,13 +15,7 @@
 
 <script>
 export default {
-    name: "PostComponent",
-    props: {
-        source: String,
-        link: Object,
-        title: String,
-        content: String
-    },
+    name: "AddPostComponent",
     data() {
         return {
         }
@@ -53,8 +45,8 @@ export default {
     }
 
     &:hover .content {
-        top: 200px;
-        height: 250px; 
+        top: 250px;
+        height: 100px; 
     }
 
     .imgBox{
@@ -64,13 +56,11 @@ export default {
         background: #333;
         border-radius: 12px;
         overflow: hidden;
+        background-image: url("../assets/img/blog-bg-post.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        
         transition: all 0.5s;
-
-        // &:hover{
-        //     top: -100px;
-        //     scale: 0.75;
-        //     box-shadow: 0 15px 45px rgb(0, 22, 13);
-        // }
 
         img{
             position: absolute;
@@ -87,15 +77,10 @@ export default {
         top: 300px;
         width: 100%;
         padding: 0 30px;
-        height: 30px;
+        height: 0px;
         overflow: hidden;
         text-align: center;
         transition: all 0.2s;
-
-        // &:hover{
-        //     top: 130px;
-        //     height: 250px;
-        // }
 
         h2 {
             font-size: 1.5em;
